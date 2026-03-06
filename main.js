@@ -3,21 +3,43 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 
 
-const userWord = prompt('Inserisci una parola');
+//frasi palindrome: Angolo bar a Bologna
+// anna
 
 
+function isPalindroma (){
+    //chiedo all'utente la parola
+    const userWord = prompt('Inserisci una parola');
+    
+    // const userWord = 'anna'; //esempio
+
+    //divido la parola in singole lettere
+    const splitUserWord = userWord.split("");
+    //roverscio l'ordine della stringa
+    let reverseUserWord = splitUserWord.reverse();
+    //riunisco le lettere per foramre una stringa in ordine contrartio
+    let joinedUserWord = reverseUserWord.join('');
+    //tolgo gli spazzi tra le parole
+    let trimmedUserWord = joinedUserWord.replaceAll(' ', '');
+    //imposto lowercase su tutte le lettere
+    let lowerUserWord = trimmedUserWord.toLowerCase();
 
 
+    // console.log(lowerUserWord);
 
+    //se la parola dell'utente é uguale alla sua versione al contrario
+    if (userWord === lowerUserWord){
+        // allora é una frase palindroma
+        console.log(userWord + ' é una frase palindroma');
+    } else {
+        // altrimenti no
+        console.log(userWord + ' non é una frase palindroma');
+    }
+    // console.log(trimmedUserWord);
 
+}
 
-
-
-
-
-
-
-
+isPalindroma();
 
 
 
@@ -38,22 +60,3 @@ const userWord = prompt('Inserisci una parola');
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-
-
-
-
-
-// Consigli del giorno
-// Scriviamo sempre in italiano i passaggi che vogliamo fare
-// Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
-
-
-
-
-
-
-// Domande da  farsi quando si crea una funzione:
-// Come dovrebbe chiamarsi?
-// Ho bisogno di parametri?
-// Devo restituire un valore?
-// Se sì, di che tipo?
