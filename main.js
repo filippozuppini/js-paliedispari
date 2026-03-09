@@ -6,6 +6,7 @@
 //frasi palindrome: Angolo bar a Bologna
 // anna
 
+/*
 
 function isPalindroma (){
     //chiedo all'utente la parola
@@ -51,12 +52,12 @@ function isPalindroma (){
 }
 
 isPalindroma();
+*/
 
 
 
 
 
-/*
 
 // Pari e Dispari
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
@@ -72,42 +73,57 @@ isPalindroma();
 
 
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-// const userPoD = prompt('Pari o Dispari?');
-const userPoD = 'pari';
+const userPoD = prompt('Pari o Dispari?');
 
-console.log(userPoD);
+console.log( 'Player: ' + userPoD);
 
-// const userNum = prompt('Inserisci il numero da 1 a 5');
-const userNum = 2;
+const userNum = prompt('Inserisci il numero da 1 a 5');
+// const userNum = 2;
 
-console.log(userNum);
+console.log('Player: ' + userNum);
 
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 function computerNum() {
     let randomNum = Math.floor((Math.random() * 5) + 1);
-    console.log(randomNum); 
+    console.log('Computer: ' + randomNum);
     
+    return randomNum;
 }
-computerNum();
+
+
 
 // Sommiamo i due numeri
-let somma = computerNum + userNum;
-console.log(somma);
+let somma = computerNum() + userNum;
+console.log( 'Somma: ' + somma);
 
 
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-function isPariOrDisapri(somma) {
+function isPariOrDispari() {
+    let pari_o_dispari
     if (somma%2 === 0) {
-        console.log('Il numero é pari');
-    } else {
-        console.log('Il numero é dispari');
+        // console.log('pari');
+        pari_o_dispari = 'pari';
         
+    } else {
+        // console.log('dispari');
+        pari_o_dispari = 'dispari';
     }
+
+    return pari_o_dispari
+
 }
 
-isPariOrDisapri(somma)
+// isPariOrDispari();
+
+// console.log(isPariOrDispari());
 
 
-*/
+
+// Dichiariamo chi ha vinto.
+if (userPoD == isPariOrDispari()) {
+    console.log('Ha vinto il player!');
+} else {
+    console.log('Ha vinto il computer!');
+}
 
