@@ -52,7 +52,14 @@ function isPalindroma (){
 }
 
 isPalindroma();
+
 */
+
+
+
+
+
+
 
 
 
@@ -69,15 +76,12 @@ isPalindroma();
 
 
 
-
-
-
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 const userPoD = prompt('Pari o Dispari?');
 
 console.log( 'Player: ' + userPoD);
 
-const userNum = prompt('Inserisci il numero da 1 a 5');
+const userNum = Number(prompt('Inserisci il numero da 1 a 5'));
 // const userNum = 2;
 
 console.log('Player: ' + userNum);
@@ -116,7 +120,7 @@ function isPariOrDispari() {
 
 // isPariOrDispari();
 
-// console.log(isPariOrDispari());
+console.log('é ' + isPariOrDispari());
 
 
 
